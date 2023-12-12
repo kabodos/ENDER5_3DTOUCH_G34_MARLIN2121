@@ -42,7 +42,7 @@
 //===========================================================================
 
 /**
- * Here are some useful links to help get your machine configured and calibrated:
+ * Here are some useful links to help get your machine configured and calibrated2:
  *
  * Example Configs:     https://github.com/MarlinFirmware/Configurations/branches/all
  *
