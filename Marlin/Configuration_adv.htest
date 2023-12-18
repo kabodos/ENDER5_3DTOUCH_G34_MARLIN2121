@@ -1092,7 +1092,7 @@
   #endif
   #define SHAPING_MIN_FREQ  20  //tt estaban comentadas      // By default the minimum of the shaping frequencies. Override to affect SRAM usage.
   #define SHAPING_MAX_STEPRATE 5000 //tt estaban comentadas // By default the maximum total step rate of the shaped axes. Override to affect SRAM usage.
-  #define SHAPING_MENU //tt               // Add a menu to the LCD to set shaping parameters.
+  #define SHAPING_MENU //tt                // Add a menu to the LCD to set shaping parameters.
 #endif
 
 #define AXIS_RELATIVE_MODES { false, false, false, false }
@@ -2169,18 +2169,18 @@
  * the probe to be unable to reach any points.
  */
 #if PROBE_SELECTED && !IS_KINEMATIC
-  #define PROBING_MARGIN_LEFT PROBING_MARGIN //tt estaba desactivado
-  #define PROBING_MARGIN_RIGHT PROBING_MARGIN //tt estaba desactivado
+  //#define PROBING_MARGIN_LEFT PROBING_MARGIN
+  //#define PROBING_MARGIN_RIGHT PROBING_MARGIN
   //#define PROBING_MARGIN_FRONT PROBING_MARGIN
   //#define PROBING_MARGIN_BACK PROBING_MARGIN
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
-  #define MESH_MIN_X MESH_INSET //tt estaba desactivado
-  #define MESH_MIN_Y MESH_INSET //tt estaba desactivado
-  #define MESH_MAX_X X_BED_SIZE - (MESH_INSET) //tt estaba desactivado
-  #define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET) //tt estaba desactivado
+  //#define MESH_MIN_X MESH_INSET
+  //#define MESH_MIN_Y MESH_INSET
+  //#define MESH_MAX_X X_BED_SIZE - (MESH_INSET)
+  //#define MESH_MAX_Y Y_BED_SIZE - (MESH_INSET)
 #endif
 
 #if BOTH(AUTO_BED_LEVELING_UBL, EEPROM_SETTINGS)

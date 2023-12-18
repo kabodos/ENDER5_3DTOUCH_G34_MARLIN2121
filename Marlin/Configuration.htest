@@ -42,7 +42,7 @@
 //===========================================================================
 
 /**
- * Here are some useful links to help get your machine configured and calibrated:
+ * Here are some useful links to help get your machine configured and calibrated2:
  *
  * Example Configs:     https://github.com/MarlinFirmware/Configurations/branches/all
  *
@@ -1274,10 +1274,10 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //tt 3dtouch
+#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN //tt 3dtouch
 
 // Force the use of the probe for Z-axis homing
-#define USE_PROBE_FOR_Z_HOMING
+//#define USE_PROBE_FOR_Z_HOMING //tt estaba activado
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1294,7 +1294,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-#define Z_MIN_PROBE_PIN PC2 // Pin 32 is the RAMPS default
+//#define Z_MIN_PROBE_PIN PC2 // Pin 32 is the RAMPS default
 
 /**
  * Probe Type
@@ -1561,7 +1561,7 @@
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   5 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  3 //tt tenia 5 // Z Clearance between probe points
+#define Z_CLEARANCE_BETWEEN_PROBES  3 //tenia 5// Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
@@ -1873,8 +1873,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR //tt estab activado //3dtouch
-#define AUTO_BED_LEVELING_UBL //ubl estaba desactivado
+#define AUTO_BED_LEVELING_BILINEAR //3dtouch
+//#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
@@ -1937,7 +1937,7 @@
   /**
    * Enable the G26 Mesh Validation Pattern tool.
    */
-  #define G26_MESH_VALIDATION //ubl estaba desactivado
+  #define G26_MESH_VALIDATION
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for G26.
@@ -1953,7 +1953,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 6 //tt 3dtouch tenia 4
+  #define GRID_MAX_POINTS_X 6 //tt 3dtouch tenia 9
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1983,10 +1983,10 @@
   //========================= Unified Bed Leveling ============================
   //===========================================================================
 
-  //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
+  //#define MESH_EDIT_GFX_OVERLAY   //tt estaba activado// Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 0.2 //35 //ubl tenia 1              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 10 //ubl tenia 10      // Don't use more than 15 points per axis, implementation limited
+  #define MESH_INSET 1              //tt tenia 10// Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 10      //tt tenia 9// Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
